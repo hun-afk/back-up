@@ -1,0 +1,30 @@
+package controller.events;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import model.dao.EventDao;
+
+@WebServlet("/events")
+public class EventsController extends HttpServlet {
+
+	@Override
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		try {
+			// 파라미터 뽑을 것 있는지..? 세션 뽑을 것 있는지..?
+			EventDao eventDao = new EventDao();
+			request.setAttribute("events", eventDao.findAll());
+			
+			request.getRequestDispatcher("/WEB-INF/view/events/list.jsp").forward(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

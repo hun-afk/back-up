@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.ServletRequestListener"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.ServletContextListener"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSessionListener"/>
+    <fullyQualifiedTypeName name="rentalbook.listeners.Sessioninitializer"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebListener"/>
+    <fullyQualifiedTypeName name="oracle.jdbc.pool.OracleDataSource"/>
+    <fullyQualifiedTypeName name="oracle.jdbc.datasource.impl.OracleDataSource"/>
+    <fullyQualifiedTypeName name="rentalbook.vo.Favorite"/>
+    <fullyQualifiedTypeName name="controller.SignupController"/>
+    <fullyQualifiedTypeName name="together.vo.Event"/>
+    <fullyQualifiedTypeName name="togerther.dao.EventDao"/>
+    <fullyQualifiedTypeName name="java.security.Identity"/>
+    <fullyQualifiedTypeName name="togerther.dao.UserDao"/>
+    <fullyQualifiedTypeName name="together.vo.User"/>
+    <fullyQualifiedTypeName name="model.dao.UserDao"/>
+    <fullyQualifiedTypeName name="model.dao.PaticipantDao"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="model.vo.Gym"/>
+    <fullyQualifiedTypeName name="model.vo.Event"/>
+    <fullyQualifiedTypeName name="model.vo.complex.EventWithDetail"/>
+    <fullyQualifiedTypeName name="model.dao.GymDao"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="model.dao.ParticipantDao"/>
+    <fullyQualifiedTypeName name="model.vo.Participant"/>
+    <fullyQualifiedTypeName name="java.awt.Event"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="model.vo.User"/>
+    <fullyQualifiedTypeName name="model.vo.complex.EventTagCount"/>
+    <fullyQualifiedTypeName name="model.dao.EventDao"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="model.dao.FeedDao"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,17 @@
+package model.vo;
+
+import java.sql.Date;
+
+public class Event {
+	int id;
+	String title;
+	String description;
+	String tag;
+	int gymId;
+	String hostId;
+	Date openAt;
+	int capacity;
+	int attendee;
+	Date registerAt;
+	
+}

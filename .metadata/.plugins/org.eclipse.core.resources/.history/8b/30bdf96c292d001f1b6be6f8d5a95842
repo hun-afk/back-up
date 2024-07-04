@@ -1,0 +1,48 @@
+package controller.events;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import model.dao.EventDao;
+import model.dao.GymDao;
+import model.vo.Event;
+import model.vo.complex.EventWithDetail;
+
+@WebServlet("/events")
+public class EventsController extends HttpServlet {
+
+	@Override
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		try {
+			// 파라미터 뽑을 것 있는지..? 세션 뽑을 것 있는지..?
+			EventDao eventDao = new EventDao();
+			GymDao gymDao = new GymDao();
+			List<Event> list = eventDao.findAll();
+			
+			List<EventWithDetail> detailList = new ArrayList<>();
+			for(Event e : list) {
+				EventWithDetail one = new EventWithDetail();
+				one.setEvent(e);
+				one.setGym(gymDao.findById(e.getGymId()));
+				if(authUser == null) {
+					one.setjoined(false);
+				}
+			}
+			
+			request.setAttribute("events", eventDao.findAll());
+			
+			request.getRequestDispatcher("/WEB-INF/view/events/list.jsp").forward(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

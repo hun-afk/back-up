@@ -1,0 +1,33 @@
+package model.vo.complex;
+
+public class EventTagCount {
+	String tag;
+	int cnt;
+
+	public EventTagCount() {
+		super();
+	}
+
+	public EventTagCount(String tag, int snt) {
+		super();
+		this.tag = tag;
+		this.snt = snt;
+	}
+
+	public String getTag() {
+		return tag;
+	}
+
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
+
+	public int getSnt() {
+		return snt;
+	}
+
+	public void setSnt(int snt) {
+		this.snt = snt;
+	}
+
+}

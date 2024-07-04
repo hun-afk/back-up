@@ -1,0 +1,36 @@
+package controller;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import model.dao.FeedDao;
+
+@WebServlet("/list") // 어노테이션 매핑
+public class ListController extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		FeedDao feedao = new FeedDao();
+
+		Map<String, Object> map = new HashMap<String, Object>();
+
+		String searchField = request.getParameter("searchField");
+		String searchWord = request.getParameter("searchWord");
+		if (searchWord != null) {
+			map.put("searchField", searchField);
+			map.put("searchWord", searchWord);
+		}
+
+		request.setAttribute("map", map);
+		request.getRequestDispatcher("/List.jsp").forward(request, response);
+	}
+}

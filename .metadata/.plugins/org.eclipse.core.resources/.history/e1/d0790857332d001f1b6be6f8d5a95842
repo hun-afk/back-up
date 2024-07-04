@@ -1,0 +1,19 @@
+package controller.events;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class Joincontroller extends HttpServlet{
+	@Override
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// path로 eventId를 받는다는 조건 하에
+		String[] items = request.getRequestURI().split("/");
+		int eventId = Integer.parseInt(items[items.length-1]);
+		// 파라미터로 받게되면
+		// int eventId = Integer.parseInt(request.getparameter("eventId"));
+	}
+}

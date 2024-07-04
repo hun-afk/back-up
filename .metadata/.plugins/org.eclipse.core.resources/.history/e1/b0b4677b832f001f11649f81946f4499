@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="board.html" method="post">
+		<table>
+			<tr>
+				<td><h2>글쓰기</h2></td>
+			</tr>
+			<tr>
+				<td class="header">Title</td>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="제목을 입력하세요" name="head"></td>
+			</tr>
+			<tr>
+				<td class="header">Comment</td>
+			</tr>
+			<tr>
+				<td><textarea placeholder="내용을 입력하세요" name="body"></textarea></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="등록" onclick="alert('정상적으로 등록되었습니다.')"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

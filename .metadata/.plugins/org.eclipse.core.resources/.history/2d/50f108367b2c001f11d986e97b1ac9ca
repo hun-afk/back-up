@@ -1,0 +1,35 @@
+<%@page import="model.dao.EventDao"%>
+<%@page import="java.awt.Event"%>
+<%@page import="java.security.DrbgParameters.Capability"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<c:choose>
+	<c:when test="${empty title }">
+		<title>핏투게더</title>
+	</c:when>
+	<c:otherwise>
+		<title>${title }::핏투게더</title>
+	</c:otherwise>
+</c:choose>
+<link rel="stylesheet"
+	href="${pageContext.servletContext.contextPath }/css/style.css?<%=System.currentTimeMillis() %>" />
+</head>
+<body>
+	<div class="container px-1">
+		<div class="my-3">로그온 메뉴바 들어갈 자리</div>
+			<p style="text-align: right">
+					현재인원${event.attendee}명 : <span style="color: hotpink;">최대 인원${event.capacity}명</span></p>
+			<div class="border-rounded p-2 text-center">
+				<h1>
+				<span class="warning">${event.title}</span> ${event.description}
+				</h1>
+			</div>
+	</div>
+</body>
+</html>
